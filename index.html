@@ -16,27 +16,41 @@
 <body>
   <div class="container">
     <h1 class="display-1 text-center">¿Puedo importarlo?</h1>
-    <p>El 19 de Enero del 2022 el gobierno de México publico en el <a href="">Diario oficial de la Federación</a> el DECRETO por el que se fomenta la regularización de vehículos usados de procedencia extranjera.</p>
-    <form class="needs-validation">
+    <p>El 19 de Enero del 2022 el gobierno de México publico en el <a href="http://dof.gob.mx/nota_detalle.php?codigo=5640965&fecha=19/01/2022">Diario oficial de la Federación</a> el DECRETO por el que se fomenta la regularización de vehículos usados de procedencia extranjera.</p>
+    <p>Los requisitos que pide de manera resumida son:</p>
+    <ul>
+      <li>
+        El vehiculo tiene que ser hecho en México, Cánada o Estados Unidos. <br />
+        <b>Nota: Esto no descalifica autos asíaticos. Por ejemplo: Entran Kia porque tiene una armadora en México, algunos Honda que fueron armados aquí y una gran variedad de camionetas ensambladas en EUA.</b>
+      </li>
+      <li>Tiene que tener una antiguedad de 5 años de ser fabricado al tiempo de importación. Reducido de 8 años.</li>
+      <li>Los vehiculos tienen que encontrarse en  Baja California, Baja California Sur, Chihuahua, Coahuila, Durango, Michoacán, Nayarit, Nuevo León, Sonora o Tamaulipas.</li>
+      <li>El propietario del automovil tiene que residir en Baja California, Baja California Sur, Chihuahua, Coahuila, Durango, Michoacán de Ocampo, Nayarit, Nuevo León, Sonora y Tamaulipas.</li>
+      <li>Que el vehiculo no haya sido usado en un crimen.</li>
+    </ul>
+    <form class="needs-validation my-4">
+      <label for="vinInput">Número de identificación vehicular (VIN)</label>
       <input type="text" class="form-control form-control-lg" id="vinInput" />
       <div class="invalid-feedback">
         Número de identificación vehicular (VIN) no válido
       </div>
-      <button type="submit" class="btn btn-primary">Verificar vin</button>
+      <div class="d-grid gap-2 col-6 mx-auto my-4">
+        <button type="button" class="btn btn-primary" onclick="terminoEntrada()">Verificar vin</button>
+      </div>
     </form>
   
-    <div id="puedeImportar" class="alert alert-success hidden" role="alert">
+    <div id="puedeImportar" class="alert alert-success hidden" role="alert" hidden>
       <h2>Este vehiculo se puede importar</h2>
       <p>El año parece entrar y fue hecho en México, Estados Unidos o Cánada.</p>
     </div>
   
-    <div id="falloAño" class="alert alert-danger hidden" role="alert">
+    <div id="falloAño" class="alert alert-danger" role="alert" hidden>
       <h2>Este año no se puede regularizar</h2>
       <p>Este vehiculo parece haber sido registrado el: </p>
       <p id="añoVIN"></p>
     </div>
   
-    <div id="otroLugar" class="alert alert-danger hidden" role="alert">
+    <div id="otroLugar" class="alert alert-danger hidden" role="alert" hidden>
       <h2>
         Este vehiculo fue fabricado en otro lugar
       </h2>
@@ -73,6 +87,11 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-  <script src="js/index.js"></script>
+  <script src="src/index.js"></script>
 </body>
+<footer>
+  <div class="container my-4">
+    <p class="lead">¿Algo está mal?¿O quieres proponer una mejora?, puedes hacerlo por la página de <a href="https://github.com/SaulNunez/se-puede-importar-este-carro-mexico">Github</a> de este proyecto. </p>
+  </div>
+</footer>
 </html>
