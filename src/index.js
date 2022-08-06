@@ -59,7 +59,7 @@ const divFalloAño = document.getElementById('falloAño');
 const divOtroLugar = document.getElementById('otroLugar');
 
 const terminoEntrada = () => {
-    const vin = vinInput.innerHTML;
+    const vin = vinInput.value;
     const esVinValido  = esValido(vin);
 
     if(esVinValido){
