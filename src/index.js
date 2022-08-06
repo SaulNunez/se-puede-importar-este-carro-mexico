@@ -48,9 +48,7 @@ function cumpleAntiguedadNecesaria(añoVehiculo){
 }
 
 function esValido(vin){
-    if(vin.length !== 17){
-        return false;
-    }
+    return vin.length === 17;
 }
 
 const vinInput = document.getElementById('vinInput');
