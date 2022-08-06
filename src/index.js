@@ -55,6 +55,7 @@ const vinInput = document.getElementById('vinInput');
 const divPuedeImportar = document.getElementById('puedeImportar');
 const divFalloAño = document.getElementById('falloAño');
 const divOtroLugar = document.getElementById('otroLugar');
+const spanAñoAuto = document.getElementById('añoRegistro');
 
 function terminoEntrada() {
     const vin = vinInput.value;
@@ -69,14 +70,16 @@ function terminoEntrada() {
     }
 
     if(esVinValido){
-        const hechoEnNorteAmerica = hechoEnNorteAmerica(vin);
+        const enZonaNafta = hechoEnNorteAmerica(vin);
         const año = getAño(vin);
         const tieneAntiguedadNecesaria = cumpleAntiguedadNecesaria(año);
 
         divFalloAño.hidden = tieneAntiguedadNecesaria;
 
-        divOtroLugar.hidden = hechoEnNorteAmerica;
+        divOtroLugar.hidden = enZonaNafta;
 
-        divPuedeImportar.hidden = !(tieneAntiguedadNecesaria && hechoEnNorteAmerica);
+        divPuedeImportar.hidden = !(tieneAntiguedadNecesaria && enZonaNafta);
+
+        spanAñoAuto.innerText = año.toString();
     }
 }
