@@ -56,7 +56,7 @@ const divPuedeImportar = document.getElementById('puedeImportar');
 const divFalloAño = document.getElementById('falloAño');
 const divOtroLugar = document.getElementById('otroLugar');
 
-const terminoEntrada = () => {
+function terminoEntrada() {
     const vin = vinInput.value;
     const esVinValido  = esValido(vin);
 
@@ -79,4 +79,4 @@ const terminoEntrada = () => {
 
         divPuedeImportar.hidden = !(tieneAntiguedadNecesaria && hechoEnNorteAmerica);
     }
-};
+}
