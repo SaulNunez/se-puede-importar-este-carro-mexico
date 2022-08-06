@@ -69,7 +69,7 @@ const terminoEntrada = () => {
     }
 
     if(esVinValido){
-        const hechoEnNorteAmerica = hechoEnZonaNafta(vin);
+        const hechoEnNorteAmerica = hechoEnNorteAmerica(vin);
         const año = getAño(vin);
         const tieneAntiguedadNecesaria = cumpleAntiguedadNecesaria(año);
 
