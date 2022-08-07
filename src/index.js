@@ -26,8 +26,8 @@ function esNumerico(value){
 
 function getAño(vin){
     //Posición 10
-    const encodingAño = vin.substring(10, 11);
-    const posSiete = vin.substring(7,8);
+    const encodingAño = vin.substring(9, 10);
+    const posSiete = vin.substring(6,7);
 
     if(esNumerico(posSiete)){
         if(esNumerico(encodingAño)){
